@@ -1,0 +1,73 @@
+Linux Uteis
+
+ls: Lista todos os arquivos no diretório atual.
+cd: Muda o diretório atual.
+pwd: Mostra o caminho do diretório atual.
+cat: Mostra o conteúdo de um arquivo.
+touch: Cria um novo arquivo.
+rm: Remove um arquivo.
+cp: Copia um arquivo.
+mv: Move ou renomeia um arquivo.
+find: Procura por arquivos em um diretório.
+grep: Procura por um padrão em um arquivo.
+man: Mostra o manual de um comando.
+sudo: Executa um comando como superusuário.
+chmod: Muda as permissões de um arquivo.
+chown: Muda o proprietário de um arquivo.
+chgrp: Muda o grupo de um arquivo.
+ps: Mostra os processos em execução.
+top: Mostra os processos em tempo real.
+kill: Termina um processo.
+shutdown: Desliga o sistema.
+reboot: Reinicia o sistema.
+getent: Este comando é usado para obter entradas de várias bases de dados importantes do sistema, incluindo passwd (que contém informações de usuários) e group (que contém informações de grupos).
+newusers: Este comando pode ser usado para criar vários usuários de uma vez a partir de um arquivo de texto.
+passwd: Muda a senha do usuário.
+gpasswd: Este comando é usado para administrar grupos, incluindo adicionar e remover membros de um grupo.
+useradd: Adiciona um novo usuário.
+userdel: Remove um usuário.
+usermod -aG [grupo] [usuário]: Adiciona um usuário a um grupo.
+-c: Esta opção é usada com o comando useradd ou adduser para adicionar um comentário (geralmente o nome completo do usuário) ao novo usuário. Por exemplo, useradd -c "João Silva" joao.
+-m: Esta opção é usada com o comando useradd ou adduser para criar o diretório home do usuário se ele não existir. Por exemplo, useradd -m joao.
+-e: Esta opção é usada com o comando useradd ou usermod para definir a data de expiração da conta do usuário. A data é especificada no formato AAAA-MM-DD. Por exemplo, useradd -e 2024-12-31 joao.
+crypt: Este é um utilitário que pode ser usado para criar hashes de senhas, que são então armazenados no arquivo /etc/shadow. Por exemplo, você pode usar openssl passwd -1 -salt xyz  yourpass para criar um hash MD5 da senha yourpass com o salt xyz.
+chage: Este comando é usado para alterar as informações de expiração da senha de um usuário.
+groupadd: Adiciona um novo grupo.
+groupdel: Remove um grupo.
+visudo: Este comando é usado para editar o arquivo sudoers, que controla quais usuários podem usar o comando sudo e o que eles podem fazer com ele.
+df: Mostra o espaço em disco usado.
+du: Mostra o uso do disco de um arquivo ou diretório.
+free: Mostra a memória livre e usada.
+uname: Mostra informações do sistema.
+ifconfig: Mostra as configurações de rede.
+ping: Envia um sinal ICMP para um host.
+netstat: Mostra as conexões de rede.
+ssh: Conecta a um servidor remoto.
+scp: Copia arquivos entre hosts na rede.
+rsync: Sincroniza arquivos entre hosts na rede.
+tar: Compacta ou descompacta arquivos.
+gzip: Compacta arquivos.
+gunzip: Descompacta arquivos.
+wget: Baixa arquivos da internet.
+curl: Transfere dados de ou para um servidor.
+apt-get: Gerencia pacotes no Debian e derivados.
+yum: Gerencia pacotes no Red Hat e derivados.
+dnf: Gerencia pacotes no Fedora.
+systemctl: Controla o systemd e o gerenciamento de serviços.
+journalctl: Consulta os logs do sistema.
+crontab: Agenda tarefas para serem executadas automaticamente.
+alias: Cria um alias para um comando.
+unalias: Remove um alias.
+history: Mostra o histórico de comandos.
+clear: Limpa a tela do terminal.
+
+Find: Sim, o comando find pode ser usado para encontrar um arquivo em todo o sistema sem saber o caminho exato. Por exemplo, para encontrar um arquivo chamado exemplo.txt em todo o sistema, você usaria o seguinte comando:
+find / -name "exemplo.txt"
+
+Netstat: Sim, o comando netstat também funciona no Linux. Para ver o PID, protocolo, porta, IP e programa, você pode usar o comando netstat -tulnpe. No entanto, você precisa ter privilégios de superusuário para ver o nome do programa e o PID.
+Configurações de Rede: Além do ifconfig, existem outros comandos úteis para configurações de rede no Linux, como ip, netstat, ss, ping, traceroute, dig, nslookup, etc.
+Curl: O curl é uma ferramenta poderosa que permite transferir dados de ou para um servidor. Além de simples solicitações GET, você pode usar o curl para enviar solicitações POST, PUT, DELETE e muito mais. Você também pode enviar cabeçalhos HTTP personalizados, autenticar, seguir redirecionamentos, entre outras coisas.
+Systemctl: O systemctl é usado para gerenciar os serviços do systemd, mas também pode mostrar a relação entre o programa e o serviço. Por exemplo, o comando systemctl status nome_do_serviço mostrará informações sobre o serviço, incluindo o caminho do arquivo do programa.
+Journalctl: O journalctl permite que você visualize os logs do sistema. Os logs podem incluir muitas informações úteis, como quando um serviço foi iniciado ou parado, mensagens de erro de programas e serviços, informações de diagnóstico e muito mais. Para visualizar os logs, você pode usar o comando journalctl. Existem muitas opções que você pode usar para filtrar e formatar os logs.
+Automações: Para automações no sistema, como tarefas agendadas com o crontab, geralmente são usados scripts shell (bash, sh). No entanto, você também pode usar qualquer linguagem de programação que possa ser executada a partir da linha de comando, como Python, Perl, Ruby, etc.
+Alias: Um alias no Linux é um nome ou abreviação que você pode definir para um comando ou uma sequência de comandos. Você pode usar um alias para reduzir a digitação e evitar erros de digitação. Por exemplo, se você frequentemente digita ls -l, você pode criar um alias chamado ll para este comando. Depois de definir o alias, você pode simplesmente digitar ll em vez de ls -l.

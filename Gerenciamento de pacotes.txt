@@ -1,0 +1,43 @@
+Gerenciamento de pacotes
+
+# Atualizar a lista de pacotes disponíveis
+sudo apt update
+
+# Atualizar todos os pacotes instalados
+sudo apt upgrade
+
+# Procurar por um pacote específico
+apt search <nome_do_pacote>
+
+# Instalar um pacote
+sudo apt install <nome_do_pacote>
+
+# Remover um pacote
+sudo apt remove <nome_do_pacote>
+
+# Remover um pacote e suas configurações
+sudo apt purge <nome_do_pacote>
+
+# Verificar se há pacotes desnecessários ou órfãos e removê-los
+sudo apt autoremove
+
+# Adicionar um repositório PPA
+sudo add-apt-repository ppa:<nome_do_ppa>
+
+# Remover um repositório PPA
+sudo add-apt-repository --remove ppa:<nome_do_ppa>
+
+# Atualizar um pacote específico
+sudo apt install --only-upgrade <nome_do_pacote>
+
+# Listar todos os pacotes instalados
+dpkg --get-selections
+
+# Verificar a versão de um pacote instalado
+apt show <nome_do_pacote>
+
+# Listar dependências de um pacote
+apt depends <nome_do_pacote>
+
+# Verificar o uso de espaço em disco dos pacotes instalados
+dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n

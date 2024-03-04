@@ -1,0 +1,65 @@
+Manipulação de Arquivos:
+
+ls: Lista os arquivos e diretórios no diretório atual.
+ls
+
+cd: Muda o diretório atual.
+cd /caminho/para/diretório
+
+cp: Copia arquivos e diretórios.
+cp /caminho/para/arquivo /caminho/para/destino
+
+mv: Move ou renomeia arquivos e diretórios.
+mv /caminho/para/arquivo /caminho/para/destino
+
+rm: Remove arquivos e diretórios.
+rm /caminho/para/arquivo
+
+touch: Cria um novo arquivo vazio.
+touch /caminho/para/arquivo
+
+cat: Exibe o conteúdo de um arquivo.
+cat /caminho/para/arquivo
+
+less: Permite a visualização de arquivos de texto de maneira paginada.
+less /caminho/para/arquivo
+
+chmod: Altera as permissões de um arquivo.
+chmod 755 /caminho/para/arquivo
+
+chown: Altera o proprietário de um arquivo.
+chown usuário:grupo /caminho/para/arquivo
+
+Avançados:
+
+Manipulação de Arquivos:
+
+ls: Lista os arquivos e diretórios no diretório atual.
+ls
+
+cd: Muda o diretório atual.
+cd /caminho/para/diretório
+
+cp: Copia arquivos e diretórios.
+cp /caminho/para/arquivo /caminho/para/destino
+
+mv: Move ou renomeia arquivos e diretórios.
+mv /caminho/para/arquivo /caminho/para/destino
+
+rm: Remove arquivos e diretórios.
+rm /caminho/para/arquivo
+
+touch: Cria um novo arquivo vazio.
+touch /caminho/para/arquivo
+
+cat: Exibe o conteúdo de um arquivo.
+cat /caminho/para/arquivo
+
+less: Permite a visualização de arquivos de texto de maneira paginada.
+less /caminho/para/arquivo
+
+chmod: Altera as permissões de um arquivo.
+chmod 755 /caminho/para/arquivo
+
+chown: Altera o proprietário de um arquivo.
+chown usuário:grupo /caminho/para/arquivo

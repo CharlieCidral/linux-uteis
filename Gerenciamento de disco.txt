@@ -1,0 +1,75 @@
+Gerenciamento de disco
+
+lsblk: Lista todos os dispositivos de bloco, como discos rígidos e drives flash.
+lsblk
+
+df: Mostra o uso do disco do sistema de arquivos.
+df -h
+
+du: Estima o uso do espaço de arquivo.
+du -sh /caminho/para/diretório
+
+fdisk: Manipula a tabela de partições do disco.
+sudo fdisk -l
+
+hdparm: Mostra informações do disco rígido ou altera uma configuração do disco rígido.
+sudo hdparm -I /dev/sda
+
+iostat: Monitora a carga do sistema, a atividade do disco, etc.
+iostat
+
+parted: Um utilitário de particionamento de disco mais flexível e poderoso do que fdisk.
+sudo parted -l
+
+mkfs: Cria um sistema de arquivos em um disco ou partição.
+sudo mkfs.ext4 /dev/sdb1
+
+fsck: Verifica a integridade de um sistema de arquivos e repara se necessário.
+sudo fsck /dev/sda1
+
+dd: Copia e converte dados brutos. Pode ser usado para copiar dados de um disco para outro.
+sudo dd if=/dev/sda of=/dev/sdb
+
+smartctl: Controla e monitora sistemas de armazenamento usando a tecnologia SMART.
+sudo smartctl -a /dev/sda
+
+lsof: Lista os arquivos abertos e os processos que os abriram. Útil para descobrir quais processos estão usando um disco.
+lsof /path/to/directory
+
+ncdu: Uma alternativa ao comando ‘du’ com uma interface mais amigável.
+ncdu /path/to/directory
+
+iotop: Monitora a atividade de E/S do disco em tempo real, semelhante ao ‘top’ para a CPU.
+iotop
+
+hdparm: Obtenha/defina parâmetros do disco SATA/IDE, incluindo testes de desempenho.
+sudo hdparm -Tt /dev/sda
+
+badblocks: Procura por setores ruins em um dispositivo de armazenamento.
+sudo badblocks -v /dev/sda
+
+MBR e GPT: O MBR (Master Boot Record) e o GPT (GUID Partition Table) são padrões de particionamento de disco. O MBR é uma forma mais antiga e reconhece até 2TB de partições. Já o GPT é mais atual e suporta até 9.4 Zetabites.
+
+Nomenclatura dos Discos: No Linux, os discos são geralmente referenciados como /dev/sda, /dev/sdb, /dev/sdc, etc.
+
+Particionamento: Antes de instalar um sistema operacional em um disco rígido, ele deve ser subdividido em unidades de armazenamento distintas, ou seja, particionado.
+
+Filesystem: O sistema de arquivos define como os dados são organizados e acessados no disco. Alguns exemplos comuns de sistemas de arquivos no Linux incluem ext4, XFS, Btrfs, etc.
+
+Gerenciamento de Volume Lógico (LVM): O LVM permite criar grupos de volumes lógicos onde você pode gerenciar o espaço em disco de maneira mais flexível. Aqui estão alguns comandos para configurar o LVM:
+pvcreate /dev/sdf1
+vgcreate teste-vg /dev/sdf1
+lvcreate -L+50G teste-vg -n dados
+
+Montagem automatica:
+
+Abra o arquivo /etc/fstab com um editor de texto como o nano ou vi. Você precisará de permissões de root para isso:
+sudo nano /etc/fstab
+
+Adicione uma linha para a partição que deseja montar automaticamente. Aqui está um exemplo de formato:
+/dev/sdb1 /mnt/meudisco ext4 defaults 0 0
+Neste exemplo, /dev/sdb1 é a partição que você deseja montar, /mnt/meudisco é o ponto de montagem, ext4 é o tipo de sistema de arquivos e defaults são as opções de montagem.
+Salve e feche o arquivo. No nano, você pode fazer isso pressionando Ctrl+X, depois Y para confirmar que deseja salvar as alterações e, em seguida, Enter para confirmar o nome do arquivo.
+Agora, a partição será montada automaticamente na inicialização. Você pode montar todas as partições listadas no /etc/fstab imediatamente com o comando:
+sudo mount -a
+

@@ -1,0 +1,63 @@
+Manipulação de Processos:
+
+ps: Exibe informações sobre os processos em execução.
+ps aux
+
+top: Exibe informações em tempo real sobre os processos em execução.
+top
+
+htop: Uma versão mais amigável do comando ‘top’.
+htop
+
+kill: Envia um sinal para um processo, geralmente usado para terminar o processo.
+kill -9 PID
+
+pkill: Envia um sinal para um processo com base em seu nome.
+pkill nome_do_processo
+
+bg: Coloca um processo em segundo plano.
+bg PID
+
+fg: Traz um processo em segundo plano para o primeiro plano.
+fg PID
+
+nice: Inicia um processo com uma prioridade definida.
+nice -n 5 /caminho/para/comando
+
+renice: Altera a prioridade de um processo em execução.
+renice -n 5 -p PID
+
+jobs: Lista os trabalhos em execução na sessão atual do shell.
+jobs
+
+Avançados:
+
+pstree: Exibe a árvore de processos em uma representação visual.
+pstree
+
+killall: Envia um sinal para todos os processos com um determinado nome.
+killall nome_do_processo
+
+pkill: Semelhante ao killall, mas permite o uso de expressões regulares para combinar o nome do processo.
+pkill -9 'nome_do_pro*'
+
+renice: Altera a prioridade de um processo em execução.
+renice -n 5 -p PID
+
+strace: Rastreia as chamadas de sistema e os sinais recebidos por um processo.
+strace -p PID
+
+lsof: Lista os arquivos abertos por processos.
+lsof -p PID
+
+nohup: Executa um comando que continua rodando após o logout.
+nohup comando &
+
+screen: Permite a criação de sessões de terminal que podem ser anexadas e desanexadas.
+screen -S nome_da_sessao
+
+tmux: Semelhante ao screen, mas com mais recursos.
+tmux new -s nome_da_sessao
+
+htop: Uma versão mais amigável do comando ‘top’ com uma interface baseada em texto completo.
+htop
